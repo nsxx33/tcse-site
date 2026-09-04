@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Twin City Small Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            shop: {
+              green: '#1e4d2b',
+              'green-dark': '#163d22',
+              amber: '#c87941',
+              cream: '#f7f5f0',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body class="bg-shop-cream text-gray-800 min-h-screen flex flex-col antialiased">
+
+  <header class="bg-shop-green-dark text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap items-center gap-4">
+      <a href="index.html" class="font-bold text-lg tracking-tight mr-auto hover:text-white/90 transition">Twin City Small Engine</a>
+      <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/80">
+        <a href="about.html" class="hover:text-white transition text-white">About</a>
+        <a href="snow-blower-repair.html" class="hover:text-white transition">Snow</a>
+        <a href="lawn-mower-repair.html" class="hover:text-white transition">Mower</a>
+        <a href="riding-mower-repair.html" class="hover:text-white transition">Rider</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-shop-green text-white">
+    <div class="max-w-5xl mx-auto px-4 py-14 md:py-16">
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight">About Twin City Small Engine</h1>
+      <p class="lede mt-4 text-lg text-white/90 max-w-2xl leading-relaxed">Independent shop since 1981. We repair walk-behind mowers, riding mowers, and snow blowers.</p>
+    </div>
+  </section>
+
+  <main class="flex-1 max-w-5xl mx-auto px-4 py-10 w-full">
+
+    <ul class="rows grid gap-4 sm:grid-cols-2 mb-10">
+      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
+        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">1</div>
+        <div><strong class="block font-semibold text-gray-900">Since 1981</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">Same trade. Written estimate before any repair.</span></div>
+      </li>
+      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
+        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">2</div>
+        <div><strong class="block font-semibold text-gray-900">Pickup area</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">Within 20 miles of 55409.</span></div>
+      </li>
+      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
+        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">3</div>
+        <div><strong class="block font-semibold text-gray-900">Drop-off</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">Drop-off in 55075. Street coming.</span></div>
+      </li>
+      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
+        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">4</div>
+        <div><strong class="block font-semibold text-gray-900">Not a dealer</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">We service common brands. We are not a factory dealer.</span></div>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer class="bg-white border-t border-black/8 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-gray-600">
+      <p class="font-semibold text-shop-green">Twin City Small Engine · Since 1981</p>
+      <p class="mt-2">Pickup within 20 miles of 55409 · Drop-off in 55075</p>
+      <p class="mt-1">Shop phone coming · Pickup fees coming</p>
+      <p class="mt-4 text-xs text-gray-500">Written estimate before any repair.</p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

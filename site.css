@@ -1,0 +1,9 @@
+/* Twin City Small Engine — complements Tailwind */
+html { scroll-behavior: smooth; }
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #1e4d2b;
+  outline-offset: 2px;
+}
