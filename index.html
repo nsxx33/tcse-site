@@ -71,6 +71,32 @@
       <a class="pill block text-center bg-white hover:bg-gray-50 text-shop-green font-semibold py-4 px-6 rounded-full transition shadow-sm border-2 border-shop-green" href="lawn-mower-repair.html">Lawn mower repair</a>
     </div>
 
+
+    <div class="bg-white rounded-2xl shadow-lg border border-black/5 p-6 md:p-8 max-w-xl mt-10">
+      <h2 class="text-xl font-semibold text-shop-green mb-1">Request service</h2>
+      <p class="text-gray-600 text-sm mb-6">Tell us what’s going on. We’ll reach you at the number you provide.</p>
+      <form name="tcse-lead" method="post" action="thank-you.html" class="space-y-4">
+        <input type="hidden" id="gclid" name="gclid" />
+        <input type="hidden" id="gbraid" name="gbraid" />
+        <input type="hidden" id="wbraid" name="wbraid" />
+        <input type="hidden" name="machine" value="general" />
+        <label class="block">
+          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">Name</span>
+          <input name="name" autocomplete="name" required class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition" />
+        </label>
+        <label class="block">
+          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">Mobile</span>
+          <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition" />
+        </label>
+        <label class="block">
+          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">What happened</span>
+          <textarea name="problem" rows="3" required placeholder="Sat all season and won’t start, need pickup, etc." class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition resize-y"></textarea>
+        </label>
+        <button type="submit" class="w-full bg-shop-amber hover:bg-amber-600 text-white font-semibold py-3.5 px-6 rounded-full transition shadow-sm">Request service</button>
+      </form>
+    </div>
+    <p class="fine text-sm text-gray-500 mt-6 leading-relaxed">Pickup and delivery within 20 miles of 55409. Drop-off in 55075. Shop phone coming. Written estimate before any repair. Since 1981.</p>
+
   </main>
 
   <footer class="bg-white border-t border-black/8 mt-auto">
