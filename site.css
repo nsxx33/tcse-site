@@ -1,9 +1,309 @@
-/* Twin City Small Engine — complements Tailwind */
-html { scroll-behavior: smooth; }
+/* Twin City Small Engine — snow-blower-repair.com look (no Tailwind) */
+
+:root {
+  --navy: #002E64;
+  --yellow: #FFDA32;
+  --green: #60C853;
+  --orange: #F39830;
+  --page: #FEFFFF;
+  --text: #4A4A4A;
+  --muted: #5C5C5C;
+  --panel: #F9F9F9;
+  --line: #E4E4E4;
+  --font: Verdana, Arial, Helvetica, sans-serif;
+  --wrap: 42rem;
+  --header-h: 4.35rem;
+  --dock-h: 3.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+body.has-dock {
+  padding-bottom: calc(var(--dock-h) + 0.75rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ——— Header: navy + yellow brand only ——— */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--navy);
+  min-height: var(--header-h);
+}
+
+.site-header .wrap {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.brand {
+  display: block;
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+.brand-name {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--yellow);
+}
+
+.brand-since {
+  margin: 0.15rem 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--yellow);
+}
+
+/* ——— Page intro ——— */
+.page {
+  padding: 1.15rem 0 2rem;
+}
+
+h1 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.lede {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* ——— Shop photo ——— */
+.shop-photo {
+  margin: 0 0 1.15rem;
+}
+
+.shop-photo img {
+  display: block;
+  width: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+/* ——— Check list on soft panel ——— */
+.checks {
+  list-style: none;
+  margin: 0 0 1.35rem;
+  padding: 0.9rem 0.85rem 0.95rem;
+  background: var(--panel);
+}
+
+.checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.checks li:last-child {
+  margin-bottom: 0;
+}
+
+.checks img {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+  margin-top: 0.05rem;
+}
+
+/* ——— Form card ——— */
+.form-card {
+  scroll-margin-top: calc(var(--header-h) + 0.6rem);
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 1rem 0.95rem 1.15rem;
+}
+
+.form-card h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.form-card .form-intro {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+label {
+  display: block;
+  margin: 0 0 0.75rem;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.28rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  padding: 0.65rem 0.7rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5.5rem;
+}
 
 input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid #1e4d2b;
-  outline-offset: 2px;
+textarea:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+}
+
+.btn-schedule {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  border: 1px solid var(--orange);
+  background: var(--green);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.85rem 0.75rem;
+  cursor: pointer;
+}
+
+.btn-schedule:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.fine {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* ——— Footer ——— */
+.site-footer {
+  background: var(--navy);
+  color: #fefefe;
+  padding: 1.35rem 0 1.5rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.site-footer p {
+  margin: 0 0 0.35rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer .foot-brand {
+  color: var(--yellow);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+/* ——— Sticky Book / Call (form pages) ——— */
+.dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  max-width: var(--wrap);
+  margin: 0 auto;
+}
+
+.dock a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--dock-h);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.dock-book {
+  background: var(--green);
+  color: #fff;
+  border-top: 1px solid var(--orange);
+}
+
+.dock-call {
+  background: var(--navy);
+  color: var(--yellow);
 }

@@ -4,99 +4,76 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Small Engine Repair</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            shop: {
-              green: '#1e4d2b',
-              'green-dark': '#163d22',
-              amber: '#c87941',
-              cream: '#f7f5f0',
-            }
-          }
-        }
-      }
-    }
-  </script>
   <link rel="stylesheet" href="site.css" />
 </head>
-<body class="bg-shop-cream text-gray-800 min-h-screen flex flex-col antialiased">
+<body class="has-dock">
 
-  <header class="bg-shop-green-dark text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap items-center gap-4">
-      <a href="index.html" class="font-bold text-lg tracking-tight mr-auto hover:text-white/90 transition">Twin City Small Engine</a>
-      <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/80">
-        <a href="about.html" class="hover:text-white transition">About</a>
-        <a href="snow-blower-repair.html" class="hover:text-white transition">Snow</a>
-        <a href="lawn-mower-repair.html" class="hover:text-white transition">Mower</a>
-        <a href="riding-mower-repair.html" class="hover:text-white transition">Rider</a>
-      </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <p class="brand-name">Twin City Small Engine</p>
+        <p class="brand-since">Since 1981</p>
+      </a>
     </div>
   </header>
 
-  <section class="bg-shop-green text-white">
-    <div class="max-w-5xl mx-auto px-4 py-14 md:py-16">
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Small Engine Repair</h1>
-      <p class="lede mt-4 text-lg text-white/90 max-w-2xl leading-relaxed">Walk-behind mowers, riders, and snow blowers. Pickup within 20 miles of 55409.</p>
+  <main class="page">
+    <div class="wrap">
+      <h1>Small Engine Repair</h1>
+      <p class="lede">Walk-behind mowers, riders, and snow blowers. Pickup within 20 miles of 55409.</p>
+      <figure class="shop-photo">
+        <img src="images/Snow-Blower-Repair-Service-Shop.gif" width="480" height="320" alt="Twin City Small Engine shop" />
+      </figure>
+      <ul class="checks">
+        <li><img src="images/Check.png" width="27" height="27" alt="" /><span>The machines we take — mowers, riders, snow blowers.</span></li>
+        <li><img src="images/Check.png" width="27" height="27" alt="" /><span>Pickup within 20 miles of 55409.</span></li>
+        <li><img src="images/Check.png" width="27" height="27" alt="" /><span>Drop-off: 702 Southview Blvd, South St. Paul, MN 55075.</span></li>
+        <li><img src="images/Check.png" width="27" height="27" alt="" /><span>Written estimate before any repair.</span></li>
+        <li><img src="images/Check.png" width="27" height="27" alt="" /><span>Turnaround 7–14 business days.</span></li>
+      </ul>
+
+      <div class="form-card" id="request">
+        <h2>Request service</h2>
+        <p class="form-intro">Tell us what’s going on. We’ll reach you at the number you provide.</p>
+        <form name="tcse-lead" method="POST" action="https://shop-command-phi.vercel.app/api/leads/intake">
+          <input type="hidden" id="gclid" name="gclid" />
+          <input type="hidden" id="gbraid" name="gbraid" />
+          <input type="hidden" id="wbraid" name="wbraid" />
+          <input type="hidden" name="machine" value="small engine" />
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Mobile</span>
+            <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+          </label>
+          <label>
+            <span>What happened</span>
+            <textarea name="problem" rows="3" required placeholder="Sat all season and won’t start, need pickup, etc."></textarea>
+          </label>
+          <button type="submit" class="btn-schedule">Schedule service</button>
+        </form>
+      </div>
+      <p class="fine">Pickup within 20 miles of 55409. Drop-off: 702 Southview Blvd, South St. Paul, MN 55075. Turnaround 7–14 business days. Written estimate before any repair. Since 1981. Shop phone coming.</p>
     </div>
-  </section>
-
-  <main class="flex-1 max-w-5xl mx-auto px-4 py-10 w-full">
-
-    <ul class="rows grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-10">
-      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
-        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">1</div>
-        <div><strong class="block font-semibold text-gray-900">The machines we take</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">Mowers, riders, snow blowers.</span></div>
-      </li>
-      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
-        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">2</div>
-        <div><strong class="block font-semibold text-gray-900">Pickup or drop-off</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">20 miles of 55409, or drop-off in 55075.</span></div>
-      </li>
-      <li class="bg-white rounded-xl p-5 border border-black/5 shadow-sm flex gap-4">
-        <div class="ico flex-shrink-0 w-11 h-11 rounded-lg bg-shop-green/10 text-shop-green font-bold flex items-center justify-center text-sm" aria-hidden="true">3</div>
-        <div><strong class="block font-semibold text-gray-900">Written estimate</strong><span class="block text-gray-600 text-sm mt-1 leading-relaxed">You approve before any repair.</span></div>
-      </li>
-    </ul>
-
-    <div class="bg-white rounded-2xl shadow-lg border border-black/5 p-6 md:p-8 max-w-xl">
-      <h2 class="text-xl font-semibold text-shop-green mb-1">Request service</h2>
-      <p class="text-gray-600 text-sm mb-6">Tell us what’s going on. We’ll reach you at the number you provide.</p>
-      <form name="tcse-lead" method="POST" action="https://shop-command-phi.vercel.app/api/leads/intake" class="space-y-4">
-        <input type="hidden" id="gclid" name="gclid" />
-        <input type="hidden" id="gbraid" name="gbraid" />
-        <input type="hidden" id="wbraid" name="wbraid" />
-        <input type="hidden" name="machine" value="small engine" />
-        <label class="block">
-          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">Name</span>
-          <input name="name" autocomplete="name" required class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition" />
-        </label>
-        <label class="block">
-          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">Mobile</span>
-          <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition" />
-        </label>
-        <label class="block">
-          <span class="text-xs font-medium uppercase tracking-wide text-gray-500">What happened</span>
-          <textarea name="problem" rows="3" required placeholder="Sat all season and won’t start, need pickup, etc." class="mt-1 w-full rounded-lg border border-gray-200 px-4 py-3 bg-white focus:border-shop-green transition resize-y"></textarea>
-        </label>
-        <button type="submit" class="w-full bg-shop-amber hover:bg-amber-600 text-white font-semibold py-3.5 px-6 rounded-full transition shadow-sm">Request service</button>
-      </form>
-    </div>
-    <p class="fine text-sm text-gray-500 mt-6 leading-relaxed">Pickup and delivery within 20 miles of 55409. Drop-off in 55075. Shop phone coming. Written estimate before any repair. Since 1981.</p>
-
   </main>
 
-  <footer class="bg-white border-t border-black/8 mt-auto">
-    <div class="max-w-5xl mx-auto px-4 py-8 text-sm text-gray-600">
-      <p class="font-semibold text-shop-green">Twin City Small Engine · Since 1981</p>
-      <p class="mt-2">Pickup within 20 miles of 55409 · Drop-off in 55075</p>
-      <p class="mt-1">Shop phone coming · Pickup fees coming</p>
-      <p class="mt-4 text-xs text-gray-500">Written estimate before any repair.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="foot-brand">Twin City Small Engine · Since 1981</p>
+      <p>Pickup within 20 miles of 55409</p>
+      <p>Drop-off: 702 Southview Blvd, South St. Paul, MN 55075</p>
+      <p>Turnaround 7–14 business days</p>
+      <p>Written estimate before any repair</p>
+      <p>Shop phone coming</p>
     </div>
   </footer>
 
+  <nav class="dock" aria-label="Request service">
+    <a class="dock-book" href="#request">Book</a>
+    <a class="dock-call" href="#request">Call</a>
+  </nav>
   <script src="site.js"></script>
 </body>
 </html>
