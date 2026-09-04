@@ -1,244 +1,41 @@
-/* Twin City Small Engine — 980px photocopy of snow-blower-repair.com */
-:root {
-  --navy: #002E64;
-  --gold: #FFDA32;
-  --green: #60C853;
-  --text: #5C5C5C;
-  --muted: #828282;
-  --band: #F9F9F9;
-  --white: #FEFFFF;
-  --link: #0432FF;
-}
-* { box-sizing: border-box; }
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #d8d8d8;
-  color: var(--text);
-  font-family: "PT Sans", Arial, sans-serif;
-}
-.canvas {
-  width: 980px;
-  margin: 0 auto;
-  background: var(--white);
-}
-.header {
-  background: var(--navy);
-  height: 93px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px 0 73px;
-}
-.brand-name {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 23px;
-  color: var(--gold);
-}
-.brand-since {
-  margin: 2px 0 0;
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 15px;
-  color: var(--gold);
-}
-.header-phone {
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 17px;
-  color: var(--gold);
-  text-decoration: none;
-}
-.hero {
-  display: flex;
-  gap: 24px;
-  padding: 36px 48px 20px 66px;
-  align-items: flex-start;
-}
-.hero-copy { flex: 1; min-width: 0; }
-.hero h1 {
-  margin: 0 0 18px;
-  font-family: Avenir, "Avenir Book", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  line-height: 1.15;
-}
-.checks { list-style: none; margin: 0; padding: 0; }
-.checks li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 0 0 8px;
-  font-size: 15px;
-  color: var(--text);
-}
-.checks img { width: 27px; height: 27px; flex: 0 0 27px; }
-.btn-green {
-  display: inline-block;
-  margin-top: 16px;
-  background: var(--green);
-  color: #fff;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border: 0;
-  cursor: pointer;
-}
-.hero-photo {
-  width: 420px;
-  flex: 0 0 420px;
-}
-.hero-photo img { width: 100%; height: auto; display: block; }
-.band {
-  background: var(--band);
-  padding: 28px 66px 36px;
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 40px;
-}
-.grid-2 h2 {
-  margin: 0 0 10px;
-  font-family: Avenir, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  color: var(--text);
-}
-.grid-2 p {
-  margin: 0;
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.45;
-}
-.section {
-  padding: 36px 66px;
-}
-.section h2 {
-  margin: 0 0 16px;
-  font-family: Avenir, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 26px;
-  color: #4A4A4A;
-}
-.section p, .section li {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-.two-col {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-}
-.two-col .text { flex: 1; }
-.two-col img { max-width: 322px; height: auto; display: block; }
-.review {
-  display: flex;
-  gap: 14px;
-  margin: 0 0 22px;
-}
-.review .mark {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  flex: 0 0 46px;
-}
-.review .lead {
-  margin: 0 0 6px;
-  font-size: 16px;
-  color: var(--text);
-}
-.review .body {
-  margin: 0 0 6px;
-  font-size: 14px;
-  color: var(--muted);
-}
-.review .meta {
-  margin: 0;
-  font-size: 13px;
-  color: var(--muted);
-}
-.award-row {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-}
-.award-row img.badge { width: 158px; height: auto; }
-.footer {
-  background: var(--navy);
-  color: #FEFFFF;
-  padding: 28px 40px 36px;
-  font-size: 12px;
-  line-height: 1.55;
-}
-.footer h3 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: var(--gold);
-  font-style: italic;
-}
-.footer a { color: #FEFEFE; }
-.trust {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: 18px;
-}
-.trust img { height: 32px; width: auto; }
-.form-page { background: #fff; }
-.form-wrap {
-  width: 980px;
-  margin: 0 auto;
-  background: #fff;
-  min-height: 100vh;
-}
-.form-card {
-  width: 560px;
-  margin: 40px auto 0;
-  border: 1px solid #ddd;
-  background: #fff;
-}
-.form-card h1 {
-  margin: 0;
-  padding: 22px 24px 8px;
-  font-size: 28px;
-  font-weight: 500;
-  color: #222;
-}
-.form-card ul {
-  margin: 0;
-  padding: 8px 24px 20px 48px;
-  color: #444;
-  font-size: 16px;
-  line-height: 1.55;
-}
-.form-next {
-  display: block;
-  width: 100%;
-  background: var(--green);
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 16px 0;
-}
-.badges {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding: 16px 40px 0;
-}
-.badges img { height: 32px; }
+/* Official mobile page photocopy — snowblower-repair-m.html, 480px canvas */
+:root{--navy:#002E64;--gold:#FFDA32;--green:#60C853;--text:#5C5C5C;--muted:#828282;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:"PT Sans",Arial,Helvetica,sans-serif;color:var(--text);font-size:16px;line-height:1.45}
+img{max-width:100%;height:auto;display:block}
+a{color:#0432FF;text-decoration:none}
+.page{max-width:480px;margin:0 auto;background:#fff}
+.header{background:var(--navy);color:var(--gold);padding:14px 16px 16px;text-align:center}
+.header .brand{font-family:Arial,Helvetica,sans-serif;font-style:italic;font-weight:700;font-size:22px;color:var(--gold);line-height:1.15}
+.header .since{font-family:Arial,Helvetica,sans-serif;font-style:italic;font-weight:700;font-size:15px;color:var(--gold);margin-top:2px}
+.header .phone{display:block;margin-top:10px;font-family:Arial,Helvetica,sans-serif;font-style:italic;font-weight:700;font-size:20px;color:var(--gold)}
+.hero-img{width:100%;background:#eee}
+.block{padding:18px 16px}
+.block h1{font-family:Avenir,"Avenir Next","PT Sans",Arial,sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;color:var(--text);margin-bottom:12px}
+.block h2{font-family:Avenir,"Avenir Next",Arial,sans-serif;font-weight:800;font-size:22px;color:var(--text);margin:0 0 10px}
+.checks{list-style:none}
+.checks li{display:flex;gap:8px;align-items:flex-start;margin:8px 0}
+.checks img{width:16px;height:16px;margin-top:4px;flex:0 0 16px}
+.cta{display:block;width:100%;background:var(--green);color:#fff;text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:14px 12px;border:0;margin:14px 0 0}
+.cta:hover{color:#fff;background:#54b548}
+.muted{color:var(--muted);font-size:14px}
+.award{display:flex;gap:12px;align-items:flex-start}
+.award img{width:92px;flex:0 0 92px}
+.review{margin:0 0 22px}
+.review .lead{font-weight:700;margin-bottom:6px}
+.review .body{margin-bottom:6px}
+.review .meta{font-size:13px;color:var(--muted)}
+.cities,.zips{font-size:12px;line-height:1.55;color:var(--text)}
+.cities h2,.zips h2{font-size:16px}
+.footer{background:var(--navy);color:var(--gold);padding:16px;font-size:14px}
+.footer a{color:var(--gold);text-decoration:underline}
+.badges{display:flex;gap:8px;justify-content:flex-end;padding:10px 16px 0}
+.badges img{height:32px;width:auto}
+.card{margin:12px 16px 32px;border:1px solid #ddd;background:#fff}
+.card-body{padding:18px 16px 8px;max-height:70vh;overflow:auto}
+.card h1{font-size:20px;font-weight:700;margin-bottom:12px}
+.card ul{padding-left:20px}
+.card li{margin:7px 0}
+.next{display:block;width:100%;background:var(--green);color:#fff;text-align:center;padding:14px 0;font-weight:700;text-transform:uppercase}
+.next:hover{color:#fff;background:#54b548}
