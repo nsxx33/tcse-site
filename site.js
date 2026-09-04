@@ -2,6 +2,8 @@
   var KEYS = ["gclid", "gbraid", "wbraid"];
   var TTL_MS = 90 * 24 * 60 * 60 * 1000;
   var PREFIX = "tcse_";
+  var INTAKE_URL = "https://shop-command-phi.vercel.app/api/leads/intake";
+  var THANKS_URL = "thank-you.html";
 
   function writeStore(key, value) {
     if (!value) return;
@@ -48,19 +50,31 @@
     });
   }
 
-  function thanksUrl() {
-    return window.innerWidth < 700 ? "thank-you-m.html" : "thank-you.html";
+  function submitButton(form) {
+    return form.querySelector('button[type="submit"], input[type="submit"]');
   }
 
   function bind(form) {
-    form.setAttribute("method", "post");
-    form.action = thanksUrl();
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", INTAKE_URL);
     fill(form);
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       fill(form);
-      // Do not put name or phone (or click ids) in the thank-you URL.
-      window.location.assign(thanksUrl());
+      var button = submitButton(form);
+      if (button) button.disabled = true;
+      fetch(INTAKE_URL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("intake failed");
+          window.location.assign(THANKS_URL);
+        })
+        .catch(function () {
+          if (button) button.disabled = false;
+          alert("Sorry — we could not send your request. Please try again.");
+        });
     });
   }
 
